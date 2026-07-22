@@ -162,8 +162,8 @@ tracked-tree listing is
 - [x] Verify pilot main, importer checksum, and the unseen source commit.
 - [x] Create issue #5 and branch `pilot/dd022-unseen-holdout`.
 - [x] Record the holdout source lock and pre-import freeze checkpoint.
-- [ ] Open the early draft PR.
-- [ ] Attempt and preserve the first no-code-change import.
+- [x] Open the early draft PR (#6).
+- [x] Attempt and preserve the first no-code-change import.
 - [ ] Run two delete-and-rebuild checks and replay.
 - [ ] Compare the holdout relationship registry and structural audits.
 - [ ] Complete the explicit advisory evidence-role analysis.
@@ -176,6 +176,11 @@ tracked-tree listing is
   during calibration or importer freeze; pin its exact tree before import.
 - `2026-07-22`: preserve all baseline and calibration exports unchanged and
   write only under `exports/holdout/` and `exports/holdout-comparison/`.
+- `2026-07-22`: the first frozen import succeeded with 1,758 objects, 2,764
+  relations, and 4,555 events. The first delete-and-rebuild was byte-identical,
+  replay passed, and all 181 canonical relations matched. Preserve the 13
+  unchanged evidence-heuristic errors separately from the passing structural
+  result.
 
 ## Multi-snapshot schema-drift and audit-stability trial
 

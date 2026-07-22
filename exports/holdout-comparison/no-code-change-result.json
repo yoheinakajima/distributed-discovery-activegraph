@@ -1,0 +1,47 @@
+{
+  "schema_version": "dd-activegraph-holdout-first-result/v1",
+  "attempt": 1,
+  "source_commit": "504c9fb9c1039b21bf57f83a794f9f0da3e64afa",
+  "source_git_tree": "f2d6e48e9cbd975743add323cef2a38e5f6f86fa",
+  "source_tracked_tree_listing_sha256": "dfebf9c4f819539547b7fde65c77b0f3d68e09fab7ea31765fbb865724733e0d",
+  "importer_sha256": "b9a0f4409e3aa53072f391f279cf33dbc11041f5755534177368386551ea79df",
+  "freeze_checkpoint_commit": "f51e28597fbd36206fc0f77c1bb7adadfa2b8ec7",
+  "importer_or_policy_changes_before_attempt": [],
+  "import_succeeded": true,
+  "recognized_file_count": 694,
+  "objects": 1758,
+  "relations": 2764,
+  "events": 4555,
+  "audit": {
+    "findings": 54,
+    "errors": 13,
+    "warnings": 9,
+    "advisories": 32,
+    "frozen_evidence_audit_errors": 13,
+    "structural_failures": 0,
+    "current_state_warnings": 1,
+    "stale_status_findings": 0,
+    "reverse_link_findings": 0,
+    "public_safety_findings": 0
+  },
+  "relationship_registry": {
+    "canonical_relation_count": 181,
+    "exact_matches": 181,
+    "missing_canonical_relations": 0,
+    "relation_type_mismatches": 0,
+    "reverse_links_present": 40,
+    "reverse_links_expected": 40,
+    "extra_inferred_relations": 30,
+    "ambiguous_relations": 0
+  },
+  "first_delete_and_rebuild_byte_identical": true,
+  "replay_succeeded": true,
+  "performance_observation": {
+    "deterministic_content": false,
+    "measurement": "single local process; tracemalloc peak; no significance claim",
+    "import_export_seconds": 6.098695,
+    "peak_tracemalloc_bytes": 29045329
+  },
+  "canonical_export_directory": "exports/holdout/504c9fb9c1039b21bf57f83a794f9f0da3e64afa"
+}
+
