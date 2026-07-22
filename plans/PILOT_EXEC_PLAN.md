@@ -145,6 +145,38 @@ ActiveGraph only for relationship and audit tooling while Git remains the
 scientific authority. The next adoption gate is a multi-snapshot schema-drift
 trial; no broader migration is authorized by this outcome.
 
+## DD-022 unseen holdout trial
+
+Issue #5 owns the decisive unseen-snapshot trial on the single branch
+`pilot/dd022-unseen-holdout`. The input is the isolated, clean, detached
+Distributed Discovery snapshot
+`504c9fb9c1039b21bf57f83a794f9f0da3e64afa`; no moving source checkout is used.
+Before the first import, the frozen importer was verified at SHA-256
+`b9a0f4409e3aa53072f391f279cf33dbc11041f5755534177368386551ea79df`.
+The source Git tree is `f2d6e48e9cbd975743add323cef2a38e5f6f86fa`, and the SHA-256 of its complete
+tracked-tree listing is
+`dfebf9c4f819539547b7fde65c77b0f3d68e09fab7ea31765fbb865724733e0d`.
+
+### Holdout progress
+
+- [x] Verify pilot main, importer checksum, and the unseen source commit.
+- [x] Create issue #5 and branch `pilot/dd022-unseen-holdout`.
+- [x] Record the holdout source lock and pre-import freeze checkpoint.
+- [ ] Open the early draft PR.
+- [ ] Attempt and preserve the first no-code-change import.
+- [ ] Run two delete-and-rebuild checks and replay.
+- [ ] Compare the holdout relationship registry and structural audits.
+- [ ] Complete the explicit advisory evidence-role analysis.
+- [ ] Write adoption decision v3 and the bounded integration proposal.
+- [ ] Run full local and GitHub validation, merge, and close issue #5.
+
+### Holdout decision log
+
+- `2026-07-22`: treat `504c9fb9` as genuinely unseen because it was not present
+  during calibration or importer freeze; pin its exact tree before import.
+- `2026-07-22`: preserve all baseline and calibration exports unchanged and
+  write only under `exports/holdout/` and `exports/holdout-comparison/`.
+
 ## Multi-snapshot schema-drift and audit-stability trial
 
 Issue #3 owns a second bounded evaluation on the single branch
