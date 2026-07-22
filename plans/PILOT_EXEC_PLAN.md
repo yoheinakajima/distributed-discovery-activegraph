@@ -39,7 +39,7 @@ importer must fail safely and preserve source checksums.
 - **M2 (complete):** import the pinned source and produce deterministic exports.
 - **M3 (complete):** prove rebuild, replay, fork/diff, no-hidden-state, and
   public-safety properties.
-- **M4 (active):** complete docs, full validation, CI, merge, and adoption
+- **M4 (complete):** complete docs, full validation, CI, merge, and adoption
   recommendation.
 
 ## Progress checklist
@@ -52,7 +52,7 @@ importer must fail safely and preserve source checksums.
 - [x] Implement and validate M1.
 - [x] Generate and validate M2 artifacts.
 - [x] Complete M3 determinism and safety proofs.
-- [ ] Merge after CI passes.
+- [x] Merge after CI passes.
 
 ## Discoveries and surprises
 
@@ -78,7 +78,7 @@ importer must fail safely and preserve source checksums.
   than harmless label differences.
 - The pinned source passes structural, orphan, reverse-link, stale-state,
   current-count, and public-safety audits. The unverified-run detector preserves
-  13 substantive verifier/corruption gaps and nine warnings associated with
+  13 substantive verifier/corruption gaps and eight warnings associated with
   failed or preliminary manifests; advisory gates produce 30 review records.
 
 ## Decision log
@@ -136,4 +136,10 @@ Never repoint an existing source clone to a moving branch.
 
 ## Outcome and retrospective
 
-Pending.
+PR #2 passed local and GitHub validation and was squash-merged to `main` as
+`88e491a3cd48b035ec0a64c420c81492c5913d24`. A post-merge push workflow also
+passed. The pilot met the rebuild, replay, export, safety, and fork/diff gates
+without modifying any source repository. Its bounded recommendation is to use
+ActiveGraph only for relationship and audit tooling while Git remains the
+scientific authority. The next adoption gate is a multi-snapshot schema-drift
+trial; no broader migration is authorized by this outcome.
