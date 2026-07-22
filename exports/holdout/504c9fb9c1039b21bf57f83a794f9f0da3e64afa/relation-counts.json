@@ -1,0 +1,29 @@
+{
+  "canonical_content_sha256": "1a32c5a17047c97e2ea58427b8dc385ca5cd5d1c234701421ab598b345822103",
+  "content": {
+    "appears_in": 227,
+    "belongs_to_program": 31,
+    "belongs_to_theorem_family": 51,
+    "benchmarked_by": 25,
+    "builds_on": 227,
+    "derived_from_source": 754,
+    "exposed_by_lab": 23,
+    "generated_by": 354,
+    "materialized_as": 176,
+    "owned_by": 316,
+    "published_at": 196,
+    "requires": 19,
+    "supersedes": 1,
+    "supports": 279,
+    "tests": 42,
+    "verified_by": 43
+  },
+  "metadata": {
+    "activegraph_commit": "8aedb1866cf5dce056af97529152ffd6f468a1ed",
+    "activegraph_packs_commit": "6639a5385518ad49f74813373c85cf96eff9adc0",
+    "generator_version": "0.1.0",
+    "schema_version": "dd-activegraph/v1",
+    "source_commit": "504c9fb9c1039b21bf57f83a794f9f0da3e64afa",
+    "source_repository": "https://github.com/yoheinakajima/distributed-discovery"
+  }
+}

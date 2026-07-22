@@ -145,6 +145,74 @@ ActiveGraph only for relationship and audit tooling while Git remains the
 scientific authority. The next adoption gate is a multi-snapshot schema-drift
 trial; no broader migration is authorized by this outcome.
 
+## DD-022 unseen holdout trial
+
+Issue #5 owns the decisive unseen-snapshot trial on the single branch
+`pilot/dd022-unseen-holdout`. The input is the isolated, clean, detached
+Distributed Discovery snapshot
+`504c9fb9c1039b21bf57f83a794f9f0da3e64afa`; no moving source checkout is used.
+Before the first import, the frozen importer was verified at SHA-256
+`b9a0f4409e3aa53072f391f279cf33dbc11041f5755534177368386551ea79df`.
+The source Git tree is `f2d6e48e9cbd975743add323cef2a38e5f6f86fa`, and the SHA-256 of its complete
+tracked-tree listing is
+`dfebf9c4f819539547b7fde65c77b0f3d68e09fab7ea31765fbb865724733e0d`.
+
+### Holdout progress
+
+- [x] Verify pilot main, importer checksum, and the unseen source commit.
+- [x] Create issue #5 and branch `pilot/dd022-unseen-holdout`.
+- [x] Record the holdout source lock and pre-import freeze checkpoint.
+- [x] Open the early draft PR (#6).
+- [x] Attempt and preserve the first no-code-change import.
+- [x] Run two delete-and-rebuild checks and replay.
+- [x] Compare the holdout relationship registry and structural audits.
+- [x] Complete the explicit advisory evidence-role analysis.
+- [x] Write adoption decision v3 and the bounded integration proposal.
+- [x] Run full local validation.
+- [x] Pass GitHub validation on PR #6.
+- [ ] Merge PR #6 and close issue #5.
+
+### Holdout decision log
+
+- `2026-07-22`: treat `504c9fb9` as genuinely unseen because it was not present
+  during calibration or importer freeze; pin its exact tree before import.
+- `2026-07-22`: preserve all baseline and calibration exports unchanged and
+  write only under `exports/holdout/` and `exports/holdout-comparison/`.
+- `2026-07-22`: the first frozen import succeeded with 1,758 objects, 2,764
+  relations, and 4,555 events. The first delete-and-rebuild was byte-identical,
+  replay passed, and all 181 canonical relations matched. Preserve the 13
+  unchanged evidence-heuristic errors separately from the passing structural
+  result.
+- `2026-07-22`: choose adoption decision v3 option 1, adopt optional structural
+  relationship auditing only. All 181 canonical relations match, all 40
+  required reverse links exist, and structural/public-safety behaviors pass;
+  the canonical registry remains authoritative.
+- `2026-07-22`: the explicit role-only policy classifies the stable 13 evidence
+  findings as five current primary, one current supporting, five historical,
+  two preliminary/failed, and zero unknown. Its five required-gate candidates
+  are all known false positives, so required evidence-audit CI stays disabled.
+
+### Holdout discoveries
+
+- Two additional clean delete-and-rebuild attempts reproduce all 11 canonical
+  files byte-for-byte and replay to 1,758 objects, 2,764 relations, and 4,555
+  events.
+- The holdout adds one DD-022 study-promotion advisory to 53 stable findings;
+  it adds no importer-drift finding and preserves the same 13 evidence errors.
+- Current-state reconciliation produces one laboratory-route count warning.
+  Stale-status, reverse-link, dangling-relation, orphan-claim, and public-safety
+  checks produce no failures.
+- Summary and focused comparison diffs remain readable. Raw graph and relation
+  diffs span 402 and 109 hunks respectively and remain supporting evidence.
+- Three local import/export observations range from 6.10 to 6.72 seconds and
+  peak traced memory from 27.9 to 29.1 MB. These are operational observations,
+  not benchmark or statistical claims.
+- Local validation passes Ruff, formatting, strict MyPy, 36 tests, baseline
+  verification, four-snapshot trial verification, and two fresh holdout
+  rebuild/replay attempts.
+- GitHub Actions run `29964378888` passes the same full validation gate on the
+  pushed holdout implementation.
+
 ## Multi-snapshot schema-drift and audit-stability trial
 
 Issue #3 owns a second bounded evaluation on the single branch

@@ -1,0 +1,14 @@
+schema_version: dd-activegraph-holdout-source-lock/v1
+source:
+  repository: https://github.com/yoheinakajima/distributed-discovery
+  commit: 504c9fb9c1039b21bf57f83a794f9f0da3e64afa
+  git_tree: f2d6e48e9cbd975743add323cef2a38e5f6f86fa
+  tracked_tree_listing_sha256: dfebf9c4f819539547b7fde65c77b0f3d68e09fab7ea31765fbb865724733e0d
+  checkout: .sources/holdout/504c9fb9c1039b21bf57f83a794f9f0da3e64afa
+  checkout_policy: isolated-clean-detached-read-only-input
+holdout:
+  label: dd-022-information-sharing-frontier-admission-gate
+  role: genuinely-unseen
+  calibration_membership: false
+  first_import_policy: frozen-importer-no-code-change
+

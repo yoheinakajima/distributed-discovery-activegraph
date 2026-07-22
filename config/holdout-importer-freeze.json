@@ -1,0 +1,17 @@
+{
+  "schema_version": "dd-activegraph-holdout-importer-freeze/v1",
+  "recorded_at_utc": "2026-07-22T22:35:51Z",
+  "pilot_base_commit": "75fee9e82577037dbbc72a9338c1d851f4980d9c",
+  "issue": 5,
+  "branch": "pilot/dd022-unseen-holdout",
+  "importer_path": "dd_activegraph/importers.py",
+  "importer_sha256": "b9a0f4409e3aa53072f391f279cf33dbc11041f5755534177368386551ea79df",
+  "frozen_audit_rules": true,
+  "frozen_schemas": true,
+  "frozen_field_aliases": true,
+  "source_commit": "504c9fb9c1039b21bf57f83a794f9f0da3e64afa",
+  "source_git_tree": "f2d6e48e9cbd975743add323cef2a38e5f6f86fa",
+  "source_tracked_tree_listing_sha256": "dfebf9c4f819539547b7fde65c77b0f3d68e09fab7ea31765fbb865724733e0d",
+  "first_import_status": "not-yet-attempted"
+}
+
