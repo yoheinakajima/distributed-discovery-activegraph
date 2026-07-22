@@ -1,0 +1,24 @@
+{
+  "deterministic_content": false,
+  "measurement": "single local process observations; tracemalloc peak; no significance claim",
+  "observations": [
+    {
+      "attempt": "first-frozen-import",
+      "deterministic_content": false,
+      "import_export_seconds": 6.098695,
+      "measurement": "single local process; tracemalloc peak; no significance claim",
+      "peak_tracemalloc_bytes": 29045329
+    },
+    {
+      "attempt": "verification-rebuild-1",
+      "import_export_seconds": 6.719151,
+      "peak_tracemalloc_bytes": 29057075
+    },
+    {
+      "attempt": "verification-rebuild-2",
+      "import_export_seconds": 6.613881,
+      "peak_tracemalloc_bytes": 27945980
+    }
+  ],
+  "schema_version": "dd-activegraph-holdout-performance/v1"
+}

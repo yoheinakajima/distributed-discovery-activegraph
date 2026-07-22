@@ -1,0 +1,3 @@
+# Advisory evidence-role analysis
+
+This is an explicit role-only policy proposal, not a mutation of the frozen audit and not a validated required gate. It classifies all 13 stable evidence findings: five current-primary findings, one current-supporting finding, five historical findings, two preliminary/failed findings, and zero unknowns. The proposal excludes seven historical or preliminary findings from a current-evidence gate and keeps the supporting finding advisory. All five required-gate candidates are known calibration false positives, so the projected required-gate false-positive rate remains 100%. Evidence auditing must therefore remain advisory and disabled as required CI.

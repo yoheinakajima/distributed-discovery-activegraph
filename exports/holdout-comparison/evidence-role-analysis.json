@@ -1,0 +1,156 @@
+{
+  "complete": true,
+  "disposition_counts": {
+    "advisory-review": 1,
+    "excluded-from-current-gate": 7,
+    "manual-review-required": 5
+  },
+  "finding_set": {
+    "calibration_findings": 13,
+    "holdout_findings": 13,
+    "new_holdout_findings": 0,
+    "resolved_holdout_findings": 0
+  },
+  "findings": [
+    {
+      "calibration_review_class": "B",
+      "calibration_review_label": "Superseded or historical non-primary run",
+      "evidence_role": "superseded/historical",
+      "finding_code": "run_missing_corruption_test",
+      "policy_disposition": "excluded-from-current-gate",
+      "role_basis": "earlier passing 17-point run; superseded by the 21-point primary run",
+      "subject_run": "20260720T200124Z_DD-001_6eb12861_f9bcf73ec7"
+    },
+    {
+      "calibration_review_class": "B",
+      "calibration_review_label": "Superseded or historical non-primary run",
+      "evidence_role": "superseded/historical",
+      "finding_code": "run_missing_verifier",
+      "policy_disposition": "excluded-from-current-gate",
+      "role_basis": "earlier passing 17-point run; superseded by the 21-point primary run",
+      "subject_run": "20260720T200124Z_DD-001_6eb12861_f9bcf73ec7"
+    },
+    {
+      "calibration_review_class": "B",
+      "calibration_review_label": "Superseded or historical non-primary run",
+      "evidence_role": "superseded/historical",
+      "finding_code": "run_missing_corruption_test",
+      "policy_disposition": "excluded-from-current-gate",
+      "role_basis": "earlier passing 21-point run; superseded by the figure-complete primary run",
+      "subject_run": "20260720T200245Z_DD-001_6eb12861_ba766d1eba"
+    },
+    {
+      "calibration_review_class": "B",
+      "calibration_review_label": "Superseded or historical non-primary run",
+      "evidence_role": "superseded/historical",
+      "finding_code": "run_missing_verifier",
+      "policy_disposition": "excluded-from-current-gate",
+      "role_basis": "earlier passing 21-point run; superseded by the figure-complete primary run",
+      "subject_run": "20260720T200245Z_DD-001_6eb12861_ba766d1eba"
+    },
+    {
+      "calibration_review_class": "D",
+      "calibration_review_label": "Importer-policy mismatch",
+      "evidence_role": "current primary",
+      "finding_code": "run_missing_corruption_test",
+      "policy_disposition": "manual-review-required",
+      "role_basis": "current primary initial-grid evidence; corruption requirement belongs to later milestones",
+      "subject_run": "20260720T200447Z_DD-001_6eb12861_ba766d1eba"
+    },
+    {
+      "calibration_review_class": "D",
+      "calibration_review_label": "Importer-policy mismatch",
+      "evidence_role": "current primary",
+      "finding_code": "run_missing_verifier",
+      "policy_disposition": "manual-review-required",
+      "role_basis": "current primary initial-grid evidence",
+      "subject_run": "20260720T200447Z_DD-001_6eb12861_ba766d1eba"
+    },
+    {
+      "calibration_review_class": "C",
+      "calibration_review_label": "Intentionally failed or preliminary run",
+      "evidence_role": "preliminary/failed",
+      "finding_code": "run_missing_corruption_test",
+      "policy_disposition": "excluded-from-current-gate",
+      "role_basis": "explicit preliminary signature audit with superseded presentation key",
+      "subject_run": "20260720T220911Z_DD-001_6822d4c6_40bf5b06a5"
+    },
+    {
+      "calibration_review_class": "D",
+      "calibration_review_label": "Importer-policy mismatch",
+      "evidence_role": "current primary",
+      "finding_code": "run_missing_corruption_test",
+      "policy_disposition": "manual-review-required",
+      "role_basis": "current primary signature evidence",
+      "subject_run": "20260720T221139Z_DD-001_b1d8d431_40bf5b06a5"
+    },
+    {
+      "calibration_review_class": "D",
+      "calibration_review_label": "Importer-policy mismatch",
+      "evidence_role": "current primary",
+      "finding_code": "run_missing_corruption_test",
+      "policy_disposition": "manual-review-required",
+      "role_basis": "current primary threshold evidence; study-wide text was misapplied per run",
+      "subject_run": "20260720T223829Z_DD-001_b2cc23f4_5e16a90ad1"
+    },
+    {
+      "calibration_review_class": "C",
+      "calibration_review_label": "Intentionally failed or preliminary run",
+      "evidence_role": "preliminary/failed",
+      "finding_code": "run_missing_verifier",
+      "policy_disposition": "excluded-from-current-gate",
+      "role_basis": "explicit preliminary disclosure run",
+      "subject_run": "20260720T225701Z_DD-002_a12ba3e8_e29b1460ae"
+    },
+    {
+      "calibration_review_class": "D",
+      "calibration_review_label": "Importer-policy mismatch",
+      "evidence_role": "current primary",
+      "finding_code": "run_missing_corruption_test",
+      "policy_disposition": "manual-review-required",
+      "role_basis": "current primary alignment-bound evidence",
+      "subject_run": "20260721T022739Z_DD-001_358cb1eb_cd16846ba5"
+    },
+    {
+      "calibration_review_class": "B",
+      "calibration_review_label": "Superseded or historical non-primary run",
+      "evidence_role": "superseded/historical",
+      "finding_code": "run_missing_verifier",
+      "policy_disposition": "excluded-from-current-gate",
+      "role_basis": "earlier non-primary registration run; replaced by the clean primary run",
+      "subject_run": "20260721T153110Z_DD-008A_637f2b94_06307caab4"
+    },
+    {
+      "calibration_review_class": "D",
+      "calibration_review_label": "Importer-policy mismatch",
+      "evidence_role": "current supporting",
+      "finding_code": "run_missing_verifier",
+      "policy_disposition": "advisory-review",
+      "role_basis": "current secondary threshold-two extension evidence",
+      "subject_run": "20260722T044453Z_DD-015_34bc4379_33e1da478b"
+    }
+  ],
+  "policy_rules": {
+    "current primary": "manual review; never auto-promote or mutate source",
+    "current supporting": "advisory review; not a required CI gate",
+    "preliminary/failed": "exclude from current-evidence gate when visibly labeled",
+    "superseded/historical": "exclude from current-evidence gate; preserve immutable history",
+    "unknown": "manual review; no inferred promotion"
+  },
+  "policy_status": "explicit-proposal-not-validated",
+  "required_gate_projection": {
+    "conclusion": "role-only interpretation does not justify required evidence CI",
+    "false_positive_rate": 1.0,
+    "known_false_positives": 5,
+    "known_true_primary_gaps": 0,
+    "precision": null,
+    "reviewed_candidates": 5
+  },
+  "role_counts": {
+    "current primary": 5,
+    "current supporting": 1,
+    "preliminary/failed": 2,
+    "superseded/historical": 5
+  },
+  "schema_version": "dd-activegraph-evidence-role-analysis/v1"
+}

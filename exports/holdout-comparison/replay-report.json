@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "counts": {
+        "events": 4555,
+        "objects": 1758,
+        "relations": 2764
+      },
+      "replay": true
+    },
+    {
+      "attempt": 2,
+      "counts": {
+        "events": 4555,
+        "objects": 1758,
+        "relations": 2764
+      },
+      "replay": true
+    }
+  ]
+}

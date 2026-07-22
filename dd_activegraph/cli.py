@@ -12,6 +12,7 @@ from dd_activegraph.demo import FORK_RUN_ID, run_fork_demo
 from dd_activegraph.engine import build_runtime, close_runtime, replay_projection
 from dd_activegraph.exporters import deterministic_files, export_runtime
 from dd_activegraph.importers import DistributedDiscoveryImporter
+from dd_activegraph.holdout import run_holdout, verify_holdout
 from dd_activegraph.trial import run_trial, verify_trial
 
 DEFAULT_STORE = Path(".activegraph/distributed-discovery.sqlite")
@@ -158,3 +159,24 @@ def trial_rebuild(source_root: Path) -> None:
 )
 def trial_verify(source_root: Path) -> None:
     _result(verify_trial(Path.cwd(), source_root.resolve()))
+
+
+@main.command("holdout-rebuild")
+@click.option(
+    "--source",
+    type=click.Path(path_type=Path, exists=True),
+    default=Path(".sources/holdout/504c9fb9c1039b21bf57f83a794f9f0da3e64afa"),
+)
+def holdout_rebuild(source: Path) -> None:
+    repo = Path.cwd()
+    _result(run_holdout(repo, source.resolve(), repo / ".activegraph/holdout"))
+
+
+@main.command("holdout-verify")
+@click.option(
+    "--source",
+    type=click.Path(path_type=Path, exists=True),
+    default=Path(".sources/holdout/504c9fb9c1039b21bf57f83a794f9f0da3e64afa"),
+)
+def holdout_verify(source: Path) -> None:
+    _result(verify_holdout(Path.cwd(), source.resolve()))

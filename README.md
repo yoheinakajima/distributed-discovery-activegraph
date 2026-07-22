@@ -72,3 +72,21 @@ The frozen importer checksum is in `config/importer-freeze.json`. Cross-snapshot
 comparisons live in `exports/comparison`, the evidence-gap review is in
 `reports/evidence-gap-triage.md`, and the conservative second decision is in
 `docs/adoption-decision-v2.md`.
+
+## DD-022 unseen holdout
+
+The decisive holdout uses the clean detached Distributed Discovery snapshot
+`504c9fb9c1039b21bf57f83a794f9f0da3e64afa`, locked in
+`config/holdout-source-lock.yml`. The pre-import freeze record and its checksum
+are in `config/holdout-importer-freeze.json` and
+`config/holdout-importer-freeze.sha256`.
+
+```sh
+make holdout-rebuild
+make holdout-verify
+```
+
+The no-code-change result and all comparison reports are under
+`exports/holdout-comparison`. Adoption decision v3 approves only optional,
+advisory structural relationship auditing; the frozen evidence heuristic
+remains disabled as a required CI gate.

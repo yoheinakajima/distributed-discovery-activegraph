@@ -1,0 +1,162 @@
+{
+  "current_state_findings": [
+    {
+      "advisory_only": false,
+      "behavior": "current_state_reconciliation",
+      "category": "audit_finding",
+      "code": "current_state_count_mismatch",
+      "details": {
+        "computed": 19,
+        "declared": 18,
+        "measure": "laboratory_routes"
+      },
+      "message": "Declared and computed laboratory_routes counts differ.",
+      "severity": "warning",
+      "subject_key": "research_program:distributed-discovery"
+    }
+  ],
+  "public_safety_findings": [],
+  "reverse_link_findings": [],
+  "schema_version": "dd-activegraph-holdout-structural-audit/v1",
+  "stale_status_findings": [],
+  "summaries": [
+    {
+      "behavior": "current_state_reconciliation",
+      "category": "audit_summary",
+      "deterministic": true,
+      "finding_count": 1,
+      "finding_keys": [
+        "decision:audit:current_state_reconciliation:finding:a80f49b9db15dd6b"
+      ],
+      "status": "warning"
+    },
+    {
+      "behavior": "dangling_relation_detector",
+      "category": "audit_summary",
+      "deterministic": true,
+      "finding_count": 0,
+      "finding_keys": [],
+      "status": "pass"
+    },
+    {
+      "behavior": "orphan_claim_detector",
+      "category": "audit_summary",
+      "deterministic": true,
+      "finding_count": 0,
+      "finding_keys": [],
+      "status": "pass"
+    },
+    {
+      "behavior": "paper_admission_gate",
+      "category": "audit_summary",
+      "deterministic": true,
+      "finding_count": 6,
+      "finding_keys": [
+        "decision:audit:paper_admission_gate:finding:0cb9625ce06271b0",
+        "decision:audit:paper_admission_gate:finding:1313610fef597768",
+        "decision:audit:paper_admission_gate:finding:8add33200eb6184b",
+        "decision:audit:paper_admission_gate:finding:d058e2b1a68acf63",
+        "decision:audit:paper_admission_gate:finding:e268ee9c72de5e9e",
+        "decision:audit:paper_admission_gate:finding:f9c4b86bfff20948"
+      ],
+      "status": "advisory"
+    },
+    {
+      "behavior": "public_safety_gate",
+      "category": "audit_summary",
+      "deterministic": true,
+      "finding_count": 0,
+      "finding_keys": [],
+      "status": "pass"
+    },
+    {
+      "behavior": "reverse_link_detector",
+      "category": "audit_summary",
+      "deterministic": true,
+      "finding_count": 0,
+      "finding_keys": [],
+      "status": "pass"
+    },
+    {
+      "behavior": "site_relation_materializer",
+      "category": "audit_summary",
+      "deterministic": true,
+      "finding_count": 0,
+      "finding_keys": [],
+      "status": "pass"
+    },
+    {
+      "behavior": "stale_status_detector",
+      "category": "audit_summary",
+      "deterministic": true,
+      "finding_count": 0,
+      "finding_keys": [],
+      "status": "pass"
+    },
+    {
+      "behavior": "study_promotion_gate",
+      "category": "audit_summary",
+      "deterministic": true,
+      "finding_count": 26,
+      "finding_keys": [
+        "decision:audit:study_promotion_gate:finding:00206c21a781c04b",
+        "decision:audit:study_promotion_gate:finding:26d2407cc092114a",
+        "decision:audit:study_promotion_gate:finding:334e01b3c50869f4",
+        "decision:audit:study_promotion_gate:finding:3658d2f07a7a42c4",
+        "decision:audit:study_promotion_gate:finding:3ac295e6f0cf5f74",
+        "decision:audit:study_promotion_gate:finding:43b7ccafbe4ba631",
+        "decision:audit:study_promotion_gate:finding:494417b1c730fd62",
+        "decision:audit:study_promotion_gate:finding:4e6bcd2084820384",
+        "decision:audit:study_promotion_gate:finding:567f2214e2d4459c",
+        "decision:audit:study_promotion_gate:finding:7e644e2ecd6095ee",
+        "decision:audit:study_promotion_gate:finding:85876530404ab5a4",
+        "decision:audit:study_promotion_gate:finding:9eceb822459b12bd",
+        "decision:audit:study_promotion_gate:finding:9ffdc1407156a480",
+        "decision:audit:study_promotion_gate:finding:a467f3db5dbc99b9",
+        "decision:audit:study_promotion_gate:finding:a868c240d552adc5",
+        "decision:audit:study_promotion_gate:finding:ab0ee3968b2ab835",
+        "decision:audit:study_promotion_gate:finding:bd52556a417569b6",
+        "decision:audit:study_promotion_gate:finding:c08bd8e64c23d30a",
+        "decision:audit:study_promotion_gate:finding:d1ab2ba5fc70a778",
+        "decision:audit:study_promotion_gate:finding:d5f7fbab7fc5f6a7",
+        "decision:audit:study_promotion_gate:finding:daf6bbde421f6222",
+        "decision:audit:study_promotion_gate:finding:e4c5bf353cc78e0d",
+        "decision:audit:study_promotion_gate:finding:e7640461663d9d77",
+        "decision:audit:study_promotion_gate:finding:e9df11457af3cd28",
+        "decision:audit:study_promotion_gate:finding:efa60ceff5bb9daf",
+        "decision:audit:study_promotion_gate:finding:fee31491886de5d7"
+      ],
+      "status": "advisory"
+    },
+    {
+      "behavior": "unverified_run_detector",
+      "category": "audit_summary",
+      "deterministic": true,
+      "finding_count": 21,
+      "finding_keys": [
+        "decision:audit:unverified_run_detector:finding:04f0d314d948b5cd",
+        "decision:audit:unverified_run_detector:finding:0f28e3d5821bcb19",
+        "decision:audit:unverified_run_detector:finding:19e9f9826dd893f2",
+        "decision:audit:unverified_run_detector:finding:25aa03aa97feb996",
+        "decision:audit:unverified_run_detector:finding:3702ac5a8284fd8c",
+        "decision:audit:unverified_run_detector:finding:6becb5ae7053a154",
+        "decision:audit:unverified_run_detector:finding:6f7f3c883b761b3e",
+        "decision:audit:unverified_run_detector:finding:7dc27ac1d71fd771",
+        "decision:audit:unverified_run_detector:finding:7fc0ac842ed1c389",
+        "decision:audit:unverified_run_detector:finding:80670c32ab73bb3d",
+        "decision:audit:unverified_run_detector:finding:8c916b6fde49eb62",
+        "decision:audit:unverified_run_detector:finding:961fbf1bcc98edd9",
+        "decision:audit:unverified_run_detector:finding:a3fd367e0a5cf65e",
+        "decision:audit:unverified_run_detector:finding:af4016c8a2d00cd7",
+        "decision:audit:unverified_run_detector:finding:be5b42a418261cf7",
+        "decision:audit:unverified_run_detector:finding:c0c6d362bb1e89fe",
+        "decision:audit:unverified_run_detector:finding:c18e4b96ed4d6210",
+        "decision:audit:unverified_run_detector:finding:cebc5677f6932156",
+        "decision:audit:unverified_run_detector:finding:e181d0fed61ebffb",
+        "decision:audit:unverified_run_detector:finding:e3fb20ed2b6093c3",
+        "decision:audit:unverified_run_detector:finding:f97f76f63e7599a6"
+      ],
+      "status": "fail"
+    }
+  ]
+}

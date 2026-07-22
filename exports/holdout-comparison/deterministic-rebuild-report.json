@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "byte_identical": true,
+      "events": 4555,
+      "objects": 1758,
+      "performance": {
+        "import_export_seconds": 6.719151,
+        "peak_tracemalloc_bytes": 29057075
+      },
+      "recognized_file_count": 694,
+      "relations": 2764,
+      "replay": true,
+      "replay_counts": {
+        "events": 4555,
+        "objects": 1758,
+        "relations": 2764
+      }
+    },
+    {
+      "attempt": 2,
+      "byte_identical": true,
+      "events": 4555,
+      "objects": 1758,
+      "performance": {
+        "import_export_seconds": 6.613881,
+        "peak_tracemalloc_bytes": 27945980
+      },
+      "recognized_file_count": 694,
+      "relations": 2764,
+      "replay": true,
+      "replay_counts": {
+        "events": 4555,
+        "objects": 1758,
+        "relations": 2764
+      }
+    }
+  ]
+}

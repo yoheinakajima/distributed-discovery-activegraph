@@ -1,0 +1,23 @@
+{
+  "assessment": "graph summary and focused comparison artifacts are primary review surfaces; raw canonical JSON remains deterministic supporting evidence",
+  "files": {
+    "graph-summary.md": {
+      "added_lines": 28,
+      "hunks": 3,
+      "removed_lines": 28
+    },
+    "graph.json": {
+      "added_lines": 1150,
+      "hunks": 402,
+      "removed_lines": 410
+    },
+    "relations.json": {
+      "added_lines": 751,
+      "hunks": 109,
+      "removed_lines": 16
+    }
+  },
+  "from": "06523c8d9ff6d0f4e66457997f5094b69065ec95",
+  "schema_version": "dd-activegraph-holdout-diff-readability/v1",
+  "to": "504c9fb9c1039b21bf57f83a794f9f0da3e64afa"
+}

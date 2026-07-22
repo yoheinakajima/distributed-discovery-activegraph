@@ -164,11 +164,12 @@ tracked-tree listing is
 - [x] Record the holdout source lock and pre-import freeze checkpoint.
 - [x] Open the early draft PR (#6).
 - [x] Attempt and preserve the first no-code-change import.
-- [ ] Run two delete-and-rebuild checks and replay.
-- [ ] Compare the holdout relationship registry and structural audits.
-- [ ] Complete the explicit advisory evidence-role analysis.
-- [ ] Write adoption decision v3 and the bounded integration proposal.
-- [ ] Run full local and GitHub validation, merge, and close issue #5.
+- [x] Run two delete-and-rebuild checks and replay.
+- [x] Compare the holdout relationship registry and structural audits.
+- [x] Complete the explicit advisory evidence-role analysis.
+- [x] Write adoption decision v3 and the bounded integration proposal.
+- [x] Run full local validation.
+- [ ] Pass GitHub validation, merge PR #6, and close issue #5.
 
 ### Holdout decision log
 
@@ -181,6 +182,33 @@ tracked-tree listing is
   replay passed, and all 181 canonical relations matched. Preserve the 13
   unchanged evidence-heuristic errors separately from the passing structural
   result.
+- `2026-07-22`: choose adoption decision v3 option 1, adopt optional structural
+  relationship auditing only. All 181 canonical relations match, all 40
+  required reverse links exist, and structural/public-safety behaviors pass;
+  the canonical registry remains authoritative.
+- `2026-07-22`: the explicit role-only policy classifies the stable 13 evidence
+  findings as five current primary, one current supporting, five historical,
+  two preliminary/failed, and zero unknown. Its five required-gate candidates
+  are all known false positives, so required evidence-audit CI stays disabled.
+
+### Holdout discoveries
+
+- Two additional clean delete-and-rebuild attempts reproduce all 11 canonical
+  files byte-for-byte and replay to 1,758 objects, 2,764 relations, and 4,555
+  events.
+- The holdout adds one DD-022 study-promotion advisory to 53 stable findings;
+  it adds no importer-drift finding and preserves the same 13 evidence errors.
+- Current-state reconciliation produces one laboratory-route count warning.
+  Stale-status, reverse-link, dangling-relation, orphan-claim, and public-safety
+  checks produce no failures.
+- Summary and focused comparison diffs remain readable. Raw graph and relation
+  diffs span 402 and 109 hunks respectively and remain supporting evidence.
+- Three local import/export observations range from 6.10 to 6.72 seconds and
+  peak traced memory from 27.9 to 29.1 MB. These are operational observations,
+  not benchmark or statistical claims.
+- Local validation passes Ruff, formatting, strict MyPy, 36 tests, baseline
+  verification, four-snapshot trial verification, and two fresh holdout
+  rebuild/replay attempts.
 
 ## Multi-snapshot schema-drift and audit-stability trial
 

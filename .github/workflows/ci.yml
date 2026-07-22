@@ -32,8 +32,19 @@ jobs:
             test "$(git -C ".sources/snapshots/$commit" rev-parse HEAD)" = "$commit"
             test -z "$(git -C ".sources/snapshots/$commit" status --porcelain)"
           done
+      - name: Clone pinned DD-022 holdout read-only
+        run: |
+          commit=504c9fb9c1039b21bf57f83a794f9f0da3e64afa
+          mkdir -p .sources/holdout
+          git clone --quiet --filter=blob:none --no-checkout \
+            https://github.com/yoheinakajima/distributed-discovery.git \
+            ".sources/holdout/$commit"
+          git -C ".sources/holdout/$commit" checkout --quiet --detach "$commit"
+          test "$(git -C ".sources/holdout/$commit" rev-parse HEAD)" = "$commit"
+          test -z "$(git -C ".sources/holdout/$commit" status --porcelain)"
       - run: uv sync --frozen --extra dev
       - run: make check
         env:
           DD_SOURCE: .sources/snapshots/a560bb771a8ccaf92958bde8e72280e2c968825f
           DD_SNAPSHOT_ROOT: .sources/snapshots
+          DD_HOLDOUT_SOURCE: .sources/holdout/504c9fb9c1039b21bf57f83a794f9f0da3e64afa

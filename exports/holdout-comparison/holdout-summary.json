@@ -1,0 +1,188 @@
+{
+  "all_rebuilds_byte_identical": true,
+  "audit_counts": {
+    "advisory": 32,
+    "error": 13,
+    "warning": 9
+  },
+  "delete_and_rebuild_attempts": 2,
+  "events": 4555,
+  "evidence_role_analysis_complete": true,
+  "importer_sha256": "b9a0f4409e3aa53072f391f279cf33dbc11041f5755534177368386551ea79df",
+  "no_code_change_import": true,
+  "objects": 1758,
+  "recognized_file_count": 694,
+  "relations": 2764,
+  "relationship_registry": {
+    "ambiguous_relations": 0,
+    "available": true,
+    "canonical_path": "site/content/relations.yml",
+    "canonical_relation_count": 181,
+    "exact_matches": 181,
+    "extra": [
+      [
+        "appears_in",
+        "study:DD-000",
+        "chapter:canonical-paradox"
+      ],
+      [
+        "appears_in",
+        "study:DD-000",
+        "chapter:foundational-objects"
+      ],
+      [
+        "appears_in",
+        "study:DD-001",
+        "chapter:foundational-objects"
+      ],
+      [
+        "appears_in",
+        "study:DD-002",
+        "chapter:institutions-action-technologies"
+      ],
+      [
+        "appears_in",
+        "study:DD-003",
+        "chapter:sources-and-attention"
+      ],
+      [
+        "appears_in",
+        "study:DD-004",
+        "chapter:institutions-action-technologies"
+      ],
+      [
+        "appears_in",
+        "study:DD-005",
+        "chapter:institutions-action-technologies"
+      ],
+      [
+        "appears_in",
+        "study:DD-006",
+        "chapter:institutions-action-technologies"
+      ],
+      [
+        "appears_in",
+        "study:DD-006B",
+        "chapter:institutions-action-technologies"
+      ],
+      [
+        "appears_in",
+        "study:DD-007",
+        "chapter:open-problems-measurement"
+      ],
+      [
+        "appears_in",
+        "study:DD-008",
+        "chapter:sources-and-attention"
+      ],
+      [
+        "appears_in",
+        "study:DD-008A",
+        "chapter:sources-and-attention"
+      ],
+      [
+        "appears_in",
+        "study:DD-008B",
+        "chapter:sources-and-attention"
+      ],
+      [
+        "appears_in",
+        "study:DD-009",
+        "chapter:open-problems-measurement"
+      ],
+      [
+        "appears_in",
+        "study:DD-010",
+        "chapter:open-problems-measurement"
+      ],
+      [
+        "appears_in",
+        "study:DD-011",
+        "chapter:open-problems-measurement"
+      ],
+      [
+        "appears_in",
+        "study:DD-012",
+        "chapter:information-sharing-frontier"
+      ],
+      [
+        "appears_in",
+        "study:DD-012",
+        "chapter:sources-and-attention"
+      ],
+      [
+        "appears_in",
+        "study:DD-013",
+        "chapter:information-sharing-frontier"
+      ],
+      [
+        "appears_in",
+        "study:DD-013",
+        "chapter:sources-and-attention"
+      ],
+      [
+        "appears_in",
+        "study:DD-014",
+        "chapter:information-sharing-frontier"
+      ],
+      [
+        "appears_in",
+        "study:DD-014",
+        "chapter:sources-and-attention"
+      ],
+      [
+        "appears_in",
+        "study:DD-015",
+        "chapter:institutions-action-technologies"
+      ],
+      [
+        "appears_in",
+        "study:DD-016",
+        "chapter:institutions-action-technologies"
+      ],
+      [
+        "appears_in",
+        "study:DD-017",
+        "chapter:institutions-action-technologies"
+      ],
+      [
+        "appears_in",
+        "study:DD-018",
+        "chapter:institutions-action-technologies"
+      ],
+      [
+        "appears_in",
+        "study:DD-019",
+        "chapter:information-sharing-frontier"
+      ],
+      [
+        "appears_in",
+        "study:DD-020",
+        "chapter:information-sharing-frontier"
+      ],
+      [
+        "appears_in",
+        "study:DD-020",
+        "chapter:sources-and-attention"
+      ],
+      [
+        "exposed_by_lab",
+        "study:DD-013",
+        "lab:audience"
+      ]
+    ],
+    "extra_inferred_relations": 30,
+    "missing": [],
+    "missing_canonical_relations": 0,
+    "relation_type_mismatches": 0,
+    "reverse_link_coverage": {
+      "expected": 40,
+      "present": 40,
+      "rate": 1.0
+    }
+  },
+  "replay": true,
+  "schema_version": "dd-activegraph-holdout-summary/v1",
+  "source_commit": "504c9fb9c1039b21bf57f83a794f9f0da3e64afa",
+  "structural_failures": 0
+}
