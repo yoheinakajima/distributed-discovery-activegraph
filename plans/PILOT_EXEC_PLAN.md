@@ -170,7 +170,7 @@ tracked-tree listing is
 - [x] Write adoption decision v3 and the bounded integration proposal.
 - [x] Run full local validation.
 - [x] Pass GitHub validation on PR #6.
-- [ ] Merge PR #6 and close issue #5.
+- [x] Merge PR #6 and close issue #5.
 
 ### Holdout decision log
 
@@ -212,6 +212,19 @@ tracked-tree listing is
   rebuild/replay attempts.
 - GitHub Actions run `29964378888` passes the same full validation gate on the
   pushed holdout implementation.
+
+### Holdout outcome and retrospective
+
+PR #6 passed final-head pull-request workflow `29964521814` and push workflow
+`29964519759`, then squash-merged to `main` as
+`719870130da6867c0ade81818e078fb02f0377c3`; issue #5 closed automatically as
+completed. The genuinely unseen snapshot passed the frozen importer and every
+structural, determinism, replay, registry, and safety gate. This supports the
+narrow option 1 decision only: optional structural relationship auditing.
+Evidence auditing remains advisory because the explicit role-only proposal
+does not resolve the 100% bounded false-positive rate among required-gate
+candidates. The exact next step is independent human review of the merged
+holdout evidence before any separately authorized canonical integration PR.
 
 ## Multi-snapshot schema-drift and audit-stability trial
 
