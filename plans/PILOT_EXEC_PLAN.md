@@ -143,3 +143,32 @@ without modifying any source repository. Its bounded recommendation is to use
 ActiveGraph only for relationship and audit tooling while Git remains the
 scientific authority. The next adoption gate is a multi-snapshot schema-drift
 trial; no broader migration is authorized by this outcome.
+
+## Multi-snapshot schema-drift and audit-stability trial
+
+Issue #3 owns a second bounded evaluation on the single branch
+`pilot/multi-snapshot-schema-drift`. The trial preserves `exports/current` as
+the original result and imports four exact Distributed Discovery commits from
+isolated, read-only snapshot clones. It will measure deterministic rebuilds,
+schema and audit drift, canonical relationship-registry agreement, performance,
+the original 13 evidence gaps, and two fork/diff fixtures. After the four
+calibration snapshots import, the importer checksum will be frozen; a merged
+DD-022 commit will be attempted only as a no-code-change holdout if one exists.
+
+### Trial progress
+
+- [x] Verify pilot `main` and live Distributed Discovery `main`.
+- [x] Create issue #3 and record the four exact source pins.
+- [ ] Create the trial branch and early draft PR.
+- [ ] Import, export, rebuild, replay, and compare four calibration snapshots.
+- [ ] Triage all 13 original substantive findings and compare registries.
+- [ ] Freeze the importer and attempt a DD-022 holdout if available.
+- [ ] Complete reports, adoption decision v2, validation, CI, merge, and closure.
+
+### Trial decision log
+
+- `2026-07-22`: treat `06523c8d9ff6d0f4e66457997f5094b69065ec95`
+  as the fourth calibration snapshot because it remains live `main`; no DD-022
+  final commit exists before importer work begins.
+- `2026-07-22`: create one immutable ignored clone per snapshot rather than
+  repointing the existing baseline source checkout.
