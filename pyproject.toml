@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "distributed-discovery-activegraph"
+version = "0.1.0"
+description = "Deterministic ActiveGraph control-plane pilot for Distributed Discovery"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = [
+  "activegraph @ git+https://github.com/yoheinakajima/activegraph.git@8aedb1866cf5dce056af97529152ffd6f468a1ed",
+  "activegraph-packs @ git+https://github.com/yoheinakajima/activegraph-packs.git@6639a5385518ad49f74813373c85cf96eff9adc0",
+  "click==8.2.1",
+  "pydantic==2.11.7",
+  "PyYAML==6.0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy==1.17.1",
+  "pytest==8.4.1",
+  "pytest-cov==6.2.1",
+  "ruff==0.12.5",
+]
+
+[project.scripts]
+ddgraph = "dd_activegraph.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["dd_activegraph"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["dd_activegraph"]
+
