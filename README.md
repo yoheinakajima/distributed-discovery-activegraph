@@ -33,3 +33,24 @@ the default SQLite database live under ignored directories in this repository.
 Implementation is developed on `pilot/distributed-discovery-activegraph` and
 reviewed through a single pull request.
 
+## Rebuild and inspect
+
+With the pinned source checked out at `.sources/distributed-discovery`:
+
+```sh
+uv sync --extra dev
+uv run ddgraph rebuild --source .sources/distributed-discovery --output exports/current
+uv run ddgraph audit --store .activegraph/distributed-discovery.sqlite
+uv run ddgraph verify --source .sources/distributed-discovery --exports exports/current
+make check
+```
+
+`rebuild` deletes only the ignored pilot database, imports the pinned checkout,
+runs all ten reactive behaviors to idle, exports the canonical projection, and
+creates the deterministic fork/diff demonstration. The committed trace is a
+canonical public summary and checksum rather than the full 4,237-event trace:
+the complete trace would add little review value beyond `graph.json` and
+`audit.md` and would materially inflate the repository.
+
+The source-of-truth boundary is documented in `docs/source-of-truth.md`; the
+bounded recommendation is in `docs/adoption-decision.md`.
