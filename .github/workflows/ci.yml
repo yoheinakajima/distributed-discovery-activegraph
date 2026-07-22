@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.8.3"
+          enable-cache: true
+      - name: Clone pinned scientific source read-only
+        run: |
+          git clone --filter=blob:none https://github.com/yoheinakajima/distributed-discovery.git .sources/distributed-discovery
+          git -C .sources/distributed-discovery checkout a560bb771a8ccaf92958bde8e72280e2c968825f
+      - run: uv sync --frozen --extra dev
+      - run: make check
+        env:
+          DD_SOURCE: .sources/distributed-discovery

@@ -23,6 +23,7 @@ dev = [
   "pytest==8.4.1",
   "pytest-cov==6.2.1",
   "ruff==0.12.5",
+  "types-PyYAML==6.0.12.20250516",
 ]
 
 [project.scripts]
@@ -30,6 +31,9 @@ ddgraph = "dd_activegraph.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["dd_activegraph"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.pytest.ini_options]
 addopts = "-q"
@@ -43,4 +47,6 @@ line-length = 100
 python_version = "3.11"
 strict = true
 packages = ["dd_activegraph"]
-
+ignore_missing_imports = true
+disallow_subclassing_any = false
+disallow_untyped_decorators = false
