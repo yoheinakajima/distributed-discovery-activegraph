@@ -8,10 +8,11 @@ remains the canonical scientific record.
 
 ## Current state
 
-The public pilot repository, issue #1, implementation branch, draft PR #2, and
-exact source pins are established. The pinned snapshot materializes to 1,656
-objects, 2,548 relations, and 4,237 events; all required exports reproduce
-byte-for-byte and the deterministic fork replays successfully.
+The original pilot and the multi-snapshot schema-drift trial are complete. The
+baseline snapshot materializes to 1,656 objects, 2,548 relations, and 4,237
+events. Four calibration snapshots import, rebuild byte-for-byte, and replay;
+the importer is frozen, the 13 original errors are triaged, relationship
+registries are compared, and adoption decision v2 is to continue bounded pilot.
 
 ## Scope
 
@@ -163,7 +164,7 @@ DD-022 commit will be attempted only as a no-code-change holdout if one exists.
 - [x] Import, export, rebuild, replay, and compare four calibration snapshots.
 - [x] Triage all 13 original substantive findings and compare registries.
 - [x] Freeze the importer and attempt a DD-022 holdout if available.
-- [ ] Complete reports, adoption decision v2, validation, CI, merge, and closure.
+- [x] Complete reports, adoption decision v2, validation, CI, merge, and closure.
 
 ### Trial decision log
 
@@ -202,3 +203,14 @@ DD-022 commit will be attempted only as a no-code-change holdout if one exists.
 - The captured single-process local import/export observations remain below 13
   seconds and 27.0 MB peak traced memory. No statistical claim is made; exact
   operational measurements remain isolated from deterministic content.
+
+### Trial outcome and retrospective
+
+PR #4 passed GitHub Actions run `29957486211` and was squash-merged to `main` as
+`086a220e6b0eeab0a61acd48ac7c6189fb8e4b26`; issue #3 closed automatically as
+completed. The post-merge push workflow for this closeout also passed. The trial
+met every normal completion floor except an unavailable DD-022 holdout, which
+was correctly recorded rather than simulated. The exact next gate is to test
+the frozen importer, without code changes, against the first merged DD-022 final
+commit and then reconsider audit policy precision. No canonical integration or
+broader adoption is authorized before that gate.
