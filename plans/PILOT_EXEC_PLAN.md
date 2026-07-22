@@ -8,8 +8,8 @@ remains the canonical scientific record.
 
 ## Current state
 
-The public pilot repository and exact source pins have been established. No
-domain implementation, generated graph, audit, or database exists yet.
+The public pilot repository, issue #1, implementation branch, and exact source
+pins have been established. No generated graph, audit, or database exists yet.
 
 ## Scope
 
@@ -30,9 +30,9 @@ importer must fail safely and preserve source checksums.
 
 ## Milestones
 
-- **M0 (active):** establish isolated repository, source locks, issue, branch,
+- **M0 (complete):** establish isolated repository, source locks, issue, branch,
   and early draft PR.
-- **M1 (pending):** implement domain pack, importer, audit behaviors, CLI, and
+- **M1 (active):** implement domain pack, importer, audit behaviors, CLI, and
   canonical exporters.
 - **M2 (pending):** import the pinned source and produce deterministic exports.
 - **M3 (pending):** prove rebuild, replay, fork/diff, no-hidden-state, and
@@ -45,7 +45,8 @@ importer must fail safely and preserve source checksums.
 - [x] Inspect live source repository heads without modifying source checkouts.
 - [x] Create the separate public pilot repository.
 - [x] Record exact dependency and source pins.
-- [ ] Open the single pilot issue, branch, and draft PR.
+- [x] Open the single pilot issue and branch; open the draft PR after this
+  checkpoint commit is pushed.
 - [ ] Implement and validate M1.
 - [ ] Generate and validate M2 artifacts.
 - [ ] Complete M3 determinism and safety proofs.
@@ -65,6 +66,8 @@ importer must fail safely and preserve source checksums.
   from the concurrently advancing local Distributed Discovery checkout.
 - `2026-07-22`: initialize `main` with only the pilot contract and locks, then
   perform all implementation on `pilot/distributed-discovery-activegraph`.
+- `2026-07-22`: issue #1 owns the bounded pilot. The implementation branch is
+  the only active substantive branch and M1 is the only active milestone.
 
 ## Validation strategy
 
