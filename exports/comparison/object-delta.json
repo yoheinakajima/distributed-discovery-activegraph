@@ -1,0 +1,86 @@
+{
+  "pairs": [
+    {
+      "cause": "real source evolution under a frozen importer",
+      "delta": {
+        "artifact": 52,
+        "benchmark_task": 0,
+        "certificate": 2,
+        "chapter": 6,
+        "claim": 8,
+        "configuration": 2,
+        "corruption_test": 2,
+        "decision": 9,
+        "experiment_module": 0,
+        "hypothesis": 0,
+        "lab": 1,
+        "paper": 0,
+        "proof": 5,
+        "research_program": 0,
+        "research_question": 2,
+        "research_run": 2,
+        "roadmap_item": 20,
+        "route": 9,
+        "study": 2,
+        "theorem_family": 7
+      },
+      "from": "63c235c2961392e1816d0fee9393dbadc7259790",
+      "to": "8ac0700e97baf51c4585bed7c4a3497dcb57fdac"
+    },
+    {
+      "cause": "real source evolution under a frozen importer",
+      "delta": {
+        "artifact": 2,
+        "benchmark_task": 0,
+        "certificate": 0,
+        "chapter": 0,
+        "claim": 0,
+        "configuration": 0,
+        "corruption_test": 0,
+        "decision": -2,
+        "experiment_module": 0,
+        "hypothesis": 0,
+        "lab": 5,
+        "paper": 0,
+        "proof": 0,
+        "research_program": 5,
+        "research_question": 0,
+        "research_run": 0,
+        "roadmap_item": 0,
+        "route": 35,
+        "study": 0,
+        "theorem_family": 9
+      },
+      "from": "8ac0700e97baf51c4585bed7c4a3497dcb57fdac",
+      "to": "a560bb771a8ccaf92958bde8e72280e2c968825f"
+    },
+    {
+      "cause": "real source evolution under a frozen importer",
+      "delta": {
+        "artifact": 27,
+        "benchmark_task": 0,
+        "certificate": 2,
+        "chapter": 0,
+        "claim": 7,
+        "configuration": 1,
+        "corruption_test": 1,
+        "decision": 2,
+        "experiment_module": 0,
+        "hypothesis": 0,
+        "lab": 1,
+        "paper": 0,
+        "proof": 4,
+        "research_program": 0,
+        "research_question": 1,
+        "research_run": 1,
+        "roadmap_item": 0,
+        "route": 9,
+        "study": 1,
+        "theorem_family": 0
+      },
+      "from": "a560bb771a8ccaf92958bde8e72280e2c968825f",
+      "to": "06523c8d9ff6d0f4e66457997f5094b69065ec95"
+    }
+  ],
+  "schema_version": "dd-activegraph-count-delta/v1"
+}

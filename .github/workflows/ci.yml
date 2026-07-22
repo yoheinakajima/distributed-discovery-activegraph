@@ -16,11 +16,24 @@ jobs:
         with:
           version: "0.8.3"
           enable-cache: true
-      - name: Clone pinned scientific source read-only
+      - name: Clone pinned scientific snapshots read-only
         run: |
-          git clone --filter=blob:none https://github.com/yoheinakajima/distributed-discovery.git .sources/distributed-discovery
-          git -C .sources/distributed-discovery checkout a560bb771a8ccaf92958bde8e72280e2c968825f
+          mkdir -p .sources/snapshots
+          for commit in \
+            63c235c2961392e1816d0fee9393dbadc7259790 \
+            8ac0700e97baf51c4585bed7c4a3497dcb57fdac \
+            a560bb771a8ccaf92958bde8e72280e2c968825f \
+            06523c8d9ff6d0f4e66457997f5094b69065ec95
+          do
+            git clone --quiet --filter=blob:none --no-checkout \
+              https://github.com/yoheinakajima/distributed-discovery.git \
+              ".sources/snapshots/$commit"
+            git -C ".sources/snapshots/$commit" checkout --quiet --detach "$commit"
+            test "$(git -C ".sources/snapshots/$commit" rev-parse HEAD)" = "$commit"
+            test -z "$(git -C ".sources/snapshots/$commit" status --porcelain)"
+          done
       - run: uv sync --frozen --extra dev
       - run: make check
         env:
-          DD_SOURCE: .sources/distributed-discovery
+          DD_SOURCE: .sources/snapshots/a560bb771a8ccaf92958bde8e72280e2c968825f
+          DD_SNAPSHOT_ROOT: .sources/snapshots

@@ -54,3 +54,21 @@ the complete trace would add little review value beyond `graph.json` and
 
 The source-of-truth boundary is documented in `docs/source-of-truth.md`; the
 bounded recommendation is in `docs/adoption-decision.md`.
+
+## Multi-snapshot drift trial
+
+The second bounded evaluation imports four exact historical snapshots listed in
+`config/snapshots.yml`. Each snapshot has its own ignored, clean checkout under
+`.sources/snapshots/<commit>` and its deterministic projection under
+`exports/snapshots/<commit>`. The original `exports/current` baseline remains
+unchanged.
+
+```sh
+uv run ddgraph trial-rebuild --source-root .sources/snapshots
+uv run ddgraph trial-verify --source-root .sources/snapshots
+```
+
+The frozen importer checksum is in `config/importer-freeze.json`. Cross-snapshot
+comparisons live in `exports/comparison`, the evidence-gap review is in
+`reports/evidence-gap-triage.md`, and the conservative second decision is in
+`docs/adoption-decision-v2.md`.

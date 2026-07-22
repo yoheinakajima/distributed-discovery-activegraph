@@ -1,0 +1,19 @@
+{
+  "canonical_content_sha256": "837a24080983e2ec9ac7ed4b2de7a909aa0a256609b0cf09e4609382f61c61d5",
+  "content": {
+    "activegraph_commit": "8aedb1866cf5dce056af97529152ffd6f468a1ed",
+    "activegraph_packs_commit": "6639a5385518ad49f74813373c85cf96eff9adc0",
+    "generator_version": "0.1.0",
+    "schema_version": "dd-activegraph/v1",
+    "source_commit": "a560bb771a8ccaf92958bde8e72280e2c968825f",
+    "source_repository": "https://github.com/yoheinakajima/distributed-discovery"
+  },
+  "metadata": {
+    "activegraph_commit": "8aedb1866cf5dce056af97529152ffd6f468a1ed",
+    "activegraph_packs_commit": "6639a5385518ad49f74813373c85cf96eff9adc0",
+    "generator_version": "0.1.0",
+    "schema_version": "dd-activegraph/v1",
+    "source_commit": "a560bb771a8ccaf92958bde8e72280e2c968825f",
+    "source_repository": "https://github.com/yoheinakajima/distributed-discovery"
+  }
+}

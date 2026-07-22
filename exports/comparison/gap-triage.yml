@@ -1,0 +1,257 @@
+schema_version: dd-activegraph-gap-triage/v1
+buckets:
+  A: Current primary-evidence gap
+  B: Superseded or historical non-primary run
+  C: Intentionally failed or preliminary run
+  D: Importer-policy mismatch
+metrics:
+  true_positive_count: 0
+  false_positive_count: 6
+  historical_exception_count: 5
+  expected_failed_or_preliminary_count: 2
+  reviewed_finding_count: 13
+  review_minutes_total: 39
+  false_positive_rate: 1.0
+findings:
+- finding_id: decision:audit:unverified_run_detector:finding:04f0d314d948b5cd
+  finding_code: run_missing_verifier
+  subject_run: 20260720T200124Z_DD-001_6eb12861_f9bcf73ec7
+  study: DD-001
+  current_evidence_role: earlier passing 17-point run; superseded by the 21-point
+    primary run
+  public_exposure: no direct claim-ledger exposure
+  claim_ids: []
+  actual_verifier_location: null
+  actual_corruption_test_location: null
+  classification: B
+  classification_label: Superseded or historical non-primary run
+  proposed_canonical_action: Preserve immutable historical evidence; no source mutation.
+  proposed_importer_action: Recognize explicit primary/superseded evidence roles.
+  should_block_ci: false
+  review_minutes: 3
+- finding_id: decision:audit:unverified_run_detector:finding:0f28e3d5821bcb19
+  finding_code: run_missing_verifier
+  subject_run: 20260720T225701Z_DD-002_a12ba3e8_e29b1460ae
+  study: DD-002
+  current_evidence_role: explicit preliminary disclosure run
+  public_exposure: no direct claim-ledger exposure
+  claim_ids: []
+  actual_verifier_location: results/verified/20260720T225848Z_DD-002_94607423_e29b1460ae/outputs/witness-verification.json
+  actual_corruption_test_location: null
+  classification: C
+  classification_label: Intentionally failed or preliminary run
+  proposed_canonical_action: Preserve the explicitly preliminary run and its label.
+  proposed_importer_action: Downgrade findings for explicitly preliminary or failed
+    runs.
+  should_block_ci: false
+  review_minutes: 3
+- finding_id: decision:audit:unverified_run_detector:finding:19e9f9826dd893f2
+  finding_code: run_missing_corruption_test
+  subject_run: 20260721T022739Z_DD-001_358cb1eb_cd16846ba5
+  study: DD-001
+  current_evidence_role: current primary alignment-bound evidence
+  public_exposure: 'public claim ledger: DD-C-0037, DD-C-0038'
+  claim_ids:
+  - DD-C-0037
+  - DD-C-0038
+  actual_verifier_location: results/verified/20260721T022739Z_DD-001_358cb1eb_cd16846ba5/outputs/independent-verification.json
+  actual_corruption_test_location: results/verified/20260721T022739Z_DD-001_358cb1eb_cd16846ba5/outputs/independent-verification.json
+  classification: D
+  classification_label: Importer-policy mismatch
+  proposed_canonical_action: No canonical change; the visible evidence already supports
+    the role.
+  proposed_importer_action: Scope requirements to the specific run and recognize validation/verifier
+    artifacts.
+  should_block_ci: false
+  review_minutes: 3
+- finding_id: decision:audit:unverified_run_detector:finding:25aa03aa97feb996
+  finding_code: run_missing_verifier
+  subject_run: 20260720T200447Z_DD-001_6eb12861_ba766d1eba
+  study: DD-001
+  current_evidence_role: current primary initial-grid evidence
+  public_exposure: 'public claim ledger: DD-C-0019, DD-C-0020, DD-C-0021, DD-C-0022,
+    DD-C-0024, DD-C-0036, DD-C-0038'
+  claim_ids:
+  - DD-C-0019
+  - DD-C-0020
+  - DD-C-0021
+  - DD-C-0022
+  - DD-C-0024
+  - DD-C-0036
+  - DD-C-0038
+  actual_verifier_location: results/verified/20260720T200447Z_DD-001_6eb12861_ba766d1eba/validation.json
+  actual_corruption_test_location: null
+  classification: D
+  classification_label: Importer-policy mismatch
+  proposed_canonical_action: No canonical change; the visible evidence already supports
+    the role.
+  proposed_importer_action: Scope requirements to the specific run and recognize validation/verifier
+    artifacts.
+  should_block_ci: false
+  review_minutes: 3
+- finding_id: decision:audit:unverified_run_detector:finding:6f7f3c883b761b3e
+  finding_code: run_missing_verifier
+  subject_run: 20260721T153110Z_DD-008A_637f2b94_06307caab4
+  study: DD-008A
+  current_evidence_role: earlier non-primary registration run; replaced by the clean
+    primary run
+  public_exposure: no direct claim-ledger exposure
+  claim_ids: []
+  actual_verifier_location: results/verified/20260721T163030Z_DD-008A_8b70668b_06307caab4/validation.json
+  actual_corruption_test_location: null
+  classification: B
+  classification_label: Superseded or historical non-primary run
+  proposed_canonical_action: Preserve immutable historical evidence; no source mutation.
+  proposed_importer_action: Recognize explicit primary/superseded evidence roles.
+  should_block_ci: false
+  review_minutes: 3
+- finding_id: decision:audit:unverified_run_detector:finding:7dc27ac1d71fd771
+  finding_code: run_missing_verifier
+  subject_run: 20260722T044453Z_DD-015_34bc4379_33e1da478b
+  study: DD-015
+  current_evidence_role: current secondary threshold-two extension evidence
+  public_exposure: 'public claim ledger: DD-C-0082'
+  claim_ids:
+  - DD-C-0082
+  actual_verifier_location: src/distributed_discovery/dynamic_attention/verification.py
+  actual_corruption_test_location: results/verified/20260722T044453Z_DD-015_34bc4379_33e1da478b/outputs/corruption-tests.json
+  classification: D
+  classification_label: Importer-policy mismatch
+  proposed_canonical_action: No canonical change; the visible evidence already supports
+    the role.
+  proposed_importer_action: Scope requirements to the specific run and recognize validation/verifier
+    artifacts.
+  should_block_ci: false
+  review_minutes: 3
+- finding_id: decision:audit:unverified_run_detector:finding:7fc0ac842ed1c389
+  finding_code: run_missing_verifier
+  subject_run: 20260720T200245Z_DD-001_6eb12861_ba766d1eba
+  study: DD-001
+  current_evidence_role: earlier passing 21-point run; superseded by the figure-complete
+    primary run
+  public_exposure: no direct claim-ledger exposure
+  claim_ids: []
+  actual_verifier_location: null
+  actual_corruption_test_location: null
+  classification: B
+  classification_label: Superseded or historical non-primary run
+  proposed_canonical_action: Preserve immutable historical evidence; no source mutation.
+  proposed_importer_action: Recognize explicit primary/superseded evidence roles.
+  should_block_ci: false
+  review_minutes: 3
+- finding_id: decision:audit:unverified_run_detector:finding:80670c32ab73bb3d
+  finding_code: run_missing_corruption_test
+  subject_run: 20260720T200124Z_DD-001_6eb12861_f9bcf73ec7
+  study: DD-001
+  current_evidence_role: earlier passing 17-point run; superseded by the 21-point
+    primary run
+  public_exposure: no direct claim-ledger exposure
+  claim_ids: []
+  actual_verifier_location: null
+  actual_corruption_test_location: null
+  classification: B
+  classification_label: Superseded or historical non-primary run
+  proposed_canonical_action: Preserve immutable historical evidence; no source mutation.
+  proposed_importer_action: Recognize explicit primary/superseded evidence roles.
+  should_block_ci: false
+  review_minutes: 3
+- finding_id: decision:audit:unverified_run_detector:finding:8c916b6fde49eb62
+  finding_code: run_missing_corruption_test
+  subject_run: 20260720T200245Z_DD-001_6eb12861_ba766d1eba
+  study: DD-001
+  current_evidence_role: earlier passing 21-point run; superseded by the figure-complete
+    primary run
+  public_exposure: no direct claim-ledger exposure
+  claim_ids: []
+  actual_verifier_location: null
+  actual_corruption_test_location: null
+  classification: B
+  classification_label: Superseded or historical non-primary run
+  proposed_canonical_action: Preserve immutable historical evidence; no source mutation.
+  proposed_importer_action: Recognize explicit primary/superseded evidence roles.
+  should_block_ci: false
+  review_minutes: 3
+- finding_id: decision:audit:unverified_run_detector:finding:af4016c8a2d00cd7
+  finding_code: run_missing_corruption_test
+  subject_run: 20260720T200447Z_DD-001_6eb12861_ba766d1eba
+  study: DD-001
+  current_evidence_role: current primary initial-grid evidence; corruption requirement
+    belongs to later milestones
+  public_exposure: 'public claim ledger: DD-C-0019, DD-C-0020, DD-C-0021, DD-C-0022,
+    DD-C-0024, DD-C-0036, DD-C-0038'
+  claim_ids:
+  - DD-C-0019
+  - DD-C-0020
+  - DD-C-0021
+  - DD-C-0022
+  - DD-C-0024
+  - DD-C-0036
+  - DD-C-0038
+  actual_verifier_location: results/verified/20260720T200447Z_DD-001_6eb12861_ba766d1eba/validation.json
+  actual_corruption_test_location: null
+  classification: D
+  classification_label: Importer-policy mismatch
+  proposed_canonical_action: No canonical change; the visible evidence already supports
+    the role.
+  proposed_importer_action: Scope requirements to the specific run and recognize validation/verifier
+    artifacts.
+  should_block_ci: false
+  review_minutes: 3
+- finding_id: decision:audit:unverified_run_detector:finding:c0c6d362bb1e89fe
+  finding_code: run_missing_corruption_test
+  subject_run: 20260720T220911Z_DD-001_6822d4c6_40bf5b06a5
+  study: DD-001
+  current_evidence_role: explicit preliminary signature audit with superseded presentation
+    key
+  public_exposure: no direct claim-ledger exposure
+  claim_ids: []
+  actual_verifier_location: results/verified/20260720T220911Z_DD-001_6822d4c6_40bf5b06a5/outputs/certificate-verification.json
+  actual_corruption_test_location: null
+  classification: C
+  classification_label: Intentionally failed or preliminary run
+  proposed_canonical_action: Preserve the explicitly preliminary run and its label.
+  proposed_importer_action: Downgrade findings for explicitly preliminary or failed
+    runs.
+  should_block_ci: false
+  review_minutes: 3
+- finding_id: decision:audit:unverified_run_detector:finding:c18e4b96ed4d6210
+  finding_code: run_missing_corruption_test
+  subject_run: 20260720T223829Z_DD-001_b2cc23f4_5e16a90ad1
+  study: DD-001
+  current_evidence_role: current primary threshold evidence; study-wide text was misapplied
+    per run
+  public_exposure: 'public claim ledger: DD-C-0026, DD-C-0027, DD-C-0028'
+  claim_ids:
+  - DD-C-0026
+  - DD-C-0027
+  - DD-C-0028
+  actual_verifier_location: results/verified/20260720T223829Z_DD-001_b2cc23f4_5e16a90ad1/validation.json
+  actual_corruption_test_location: null
+  classification: D
+  classification_label: Importer-policy mismatch
+  proposed_canonical_action: No canonical change; the visible evidence already supports
+    the role.
+  proposed_importer_action: Scope requirements to the specific run and recognize validation/verifier
+    artifacts.
+  should_block_ci: false
+  review_minutes: 3
+- finding_id: decision:audit:unverified_run_detector:finding:e3fb20ed2b6093c3
+  finding_code: run_missing_corruption_test
+  subject_run: 20260720T221139Z_DD-001_b1d8d431_40bf5b06a5
+  study: DD-001
+  current_evidence_role: current primary signature evidence
+  public_exposure: 'public claim ledger: DD-C-0023, DD-C-0024, DD-C-0025'
+  claim_ids:
+  - DD-C-0023
+  - DD-C-0024
+  - DD-C-0025
+  actual_verifier_location: results/verified/20260720T221139Z_DD-001_b1d8d431_40bf5b06a5/outputs/certificate-verification.json
+  actual_corruption_test_location: results/verified/20260720T221139Z_DD-001_b1d8d431_40bf5b06a5/validation.json
+  classification: D
+  classification_label: Importer-policy mismatch
+  proposed_canonical_action: No canonical change; the visible evidence already supports
+    the role.
+  proposed_importer_action: Scope requirements to the specific run and recognize validation/verifier
+    artifacts.
+  should_block_ci: false
+  review_minutes: 3

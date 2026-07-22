@@ -17,4 +17,4 @@ snapshots:
 holdout:
   policy: latest merged DD-022 final main commit, if available after importer freeze
   commit: null
-  status: unavailable-before-freeze
+  status: unavailable-after-freeze

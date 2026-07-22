@@ -10,6 +10,7 @@ from typing import Any
 from activegraph import Runtime
 
 from dd_activegraph.ontology import (
+    SOURCE_COMMIT,
     canonical_json,
     export_metadata,
     sha256_text,
@@ -18,16 +19,16 @@ from dd_activegraph.ontology import (
 from dd_activegraph.validation import HOST_PATH_RE, SECRET_PATTERNS
 
 
-def _envelope(content: Any) -> dict[str, Any]:
+def _envelope(content: Any, source_commit: str) -> dict[str, Any]:
     return {
-        "metadata": export_metadata(),
+        "metadata": export_metadata(source_commit),
         "canonical_content_sha256": sha256_text(canonical_json(content)),
         "content": content,
     }
 
 
-def _write_json(path: Path, content: Any) -> None:
-    path.write_text(json.dumps(_envelope(content), indent=2, sort_keys=True) + "\n")
+def _write_json(path: Path, content: Any, source_commit: str) -> None:
+    path.write_text(json.dumps(_envelope(content, source_commit), indent=2, sort_keys=True) + "\n")
 
 
 def projection(runtime: Runtime) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
@@ -72,7 +73,9 @@ def trace_projection(runtime: Runtime) -> list[dict[str, Any]]:
     ]
 
 
-def export_runtime(runtime: Runtime, output: Path) -> dict[str, Any]:
+def export_runtime(
+    runtime: Runtime, output: Path, *, source_commit: str = SOURCE_COMMIT
+) -> dict[str, Any]:
     output.mkdir(parents=True, exist_ok=True)
     objects, relations = projection(runtime)
     findings, summaries = audit_records(objects)
@@ -97,12 +100,12 @@ def export_runtime(runtime: Runtime, output: Path) -> dict[str, Any]:
             if item["key"] == "research_program:distributed-discovery"
         ),
     }
-    _write_json(output / "source-lock.json", export_metadata())
-    _write_json(output / "graph.json", objects)
-    _write_json(output / "relations.json", relations)
-    _write_json(output / "validation.json", validation)
-    _write_json(output / "object-counts.json", object_counts)
-    _write_json(output / "relation-counts.json", relation_counts)
+    _write_json(output / "source-lock.json", export_metadata(source_commit), source_commit)
+    _write_json(output / "graph.json", objects, source_commit)
+    _write_json(output / "relations.json", relations, source_commit)
+    _write_json(output / "validation.json", validation, source_commit)
+    _write_json(output / "object-counts.json", object_counts, source_commit)
+    _write_json(output / "relation-counts.json", relation_counts, source_commit)
     _write_json(
         output / "trace-summary.json",
         {
@@ -110,6 +113,7 @@ def export_runtime(runtime: Runtime, output: Path) -> dict[str, Any]:
             "event_counts": dict(sorted(Counter(x["type"] for x in trace).items())),
             "trace_sha256": trace_hash,
         },
+        source_commit,
     )
     (output / "trace.sha256").write_text(f"{trace_hash}  canonical-public-trace\n")
     summary_lines = [

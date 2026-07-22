@@ -12,6 +12,7 @@ from dd_activegraph.demo import FORK_RUN_ID, run_fork_demo
 from dd_activegraph.engine import build_runtime, close_runtime, replay_projection
 from dd_activegraph.exporters import deterministic_files, export_runtime
 from dd_activegraph.importers import DistributedDiscoveryImporter
+from dd_activegraph.trial import run_trial, verify_trial
 
 DEFAULT_STORE = Path(".activegraph/distributed-discovery.sqlite")
 
@@ -127,3 +128,33 @@ def verify(source: Path, exports_path: Path) -> None:
     if mismatches:
         raise click.ClickException(f"deterministic export mismatch: {', '.join(mismatches)}")
     _result({"byte_identical": True, "files": sorted(observed), "replay": True, "source_pin": True})
+
+
+@main.command("trial-rebuild")
+@click.option(
+    "--source-root",
+    type=click.Path(path_type=Path, exists=True),
+    default=Path(".sources/snapshots"),
+)
+def trial_rebuild(source_root: Path) -> None:
+    repo = Path.cwd()
+    _result(
+        run_trial(
+            repo,
+            source_root.resolve(),
+            repo / "exports/snapshots",
+            repo / "exports/comparison",
+            repo / "reports",
+            repo / ".activegraph/trial",
+        )
+    )
+
+
+@main.command("trial-verify")
+@click.option(
+    "--source-root",
+    type=click.Path(path_type=Path, exists=True),
+    default=Path(".sources/snapshots"),
+)
+def trial_verify(source_root: Path) -> None:
+    _result(verify_trial(Path.cwd(), source_root.resolve()))

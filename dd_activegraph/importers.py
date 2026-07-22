@@ -282,7 +282,10 @@ class DistributedDiscoveryImporter:
 
     def _read_site_relations(self) -> None:
         relative = "site/content/relations.yml"
-        self.site_relations = _as_dict(self.reader.yaml(relative), relative)
+        if (self.source / relative).is_file():
+            self.site_relations = _as_dict(self.reader.yaml(relative), relative)
+        else:
+            self.site_relations = {}
 
     def _read_paper_family_map(self) -> None:
         relative = "docs/paper-family-map.yml"

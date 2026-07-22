@@ -1,0 +1,18 @@
+{
+  "canonical_content_sha256": "fa36a6d18da544ced0bb8f59d27f6e549d91f3c2956d7a558f75d8fdced9de3d",
+  "content": {
+    "audit_error_count": 13,
+    "audit_finding_count": 53,
+    "source_file_count": 656,
+    "structural_and_safety_valid": false,
+    "valid": false
+  },
+  "metadata": {
+    "activegraph_commit": "8aedb1866cf5dce056af97529152ffd6f468a1ed",
+    "activegraph_packs_commit": "6639a5385518ad49f74813373c85cf96eff9adc0",
+    "generator_version": "0.1.0",
+    "schema_version": "dd-activegraph/v1",
+    "source_commit": "8ac0700e97baf51c4585bed7c4a3497dcb57fdac",
+    "source_repository": "https://github.com/yoheinakajima/distributed-discovery"
+  }
+}

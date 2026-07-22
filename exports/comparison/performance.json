@@ -1,0 +1,40 @@
+{
+  "captured_at_utc": "2026-07-22T20:56:25.678569+00:00",
+  "deterministic_content": false,
+  "measurement": "single local process; tracemalloc peak; no significance claim",
+  "review_metrics": {
+    "advisory_noise_rate": 1.0,
+    "advisory_noise_rate_definition": "non-CI-blocking reviewed errors and warnings divided by all reviewed errors and warnings",
+    "expected_failed_or_preliminary_count": 2,
+    "expected_failed_run_warning_count": 8,
+    "false_positive_count": 6,
+    "false_positive_rate": 1.0,
+    "historical_exception_count": 5,
+    "review_minutes_total": 39,
+    "reviewed_finding_count": 13,
+    "true_positive_count": 0
+  },
+  "schema_version": "dd-activegraph-performance/v1",
+  "snapshots": [
+    {
+      "commit": "63c235c2961392e1816d0fee9393dbadc7259790",
+      "import_export_seconds": 4.758231,
+      "peak_tracemalloc_bytes": 22372782
+    },
+    {
+      "commit": "8ac0700e97baf51c4585bed7c4a3497dcb57fdac",
+      "import_export_seconds": 12.683581,
+      "peak_tracemalloc_bytes": 23582248
+    },
+    {
+      "commit": "a560bb771a8ccaf92958bde8e72280e2c968825f",
+      "import_export_seconds": 7.400633,
+      "peak_tracemalloc_bytes": 25733079
+    },
+    {
+      "commit": "06523c8d9ff6d0f4e66457997f5094b69065ec95",
+      "import_export_seconds": 6.581713,
+      "peak_tracemalloc_bytes": 26989389
+    }
+  ]
+}
