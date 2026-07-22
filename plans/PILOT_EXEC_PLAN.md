@@ -143,3 +143,62 @@ without modifying any source repository. Its bounded recommendation is to use
 ActiveGraph only for relationship and audit tooling while Git remains the
 scientific authority. The next adoption gate is a multi-snapshot schema-drift
 trial; no broader migration is authorized by this outcome.
+
+## Multi-snapshot schema-drift and audit-stability trial
+
+Issue #3 owns a second bounded evaluation on the single branch
+`pilot/multi-snapshot-schema-drift`. The trial preserves `exports/current` as
+the original result and imports four exact Distributed Discovery commits from
+isolated, read-only snapshot clones. It will measure deterministic rebuilds,
+schema and audit drift, canonical relationship-registry agreement, performance,
+the original 13 evidence gaps, and two fork/diff fixtures. After the four
+calibration snapshots import, the importer checksum will be frozen; a merged
+DD-022 commit will be attempted only as a no-code-change holdout if one exists.
+
+### Trial progress
+
+- [x] Verify pilot `main` and live Distributed Discovery `main`.
+- [x] Create issue #3 and record the four exact source pins.
+- [x] Create the trial branch and early draft PR (#4).
+- [x] Import, export, rebuild, replay, and compare four calibration snapshots.
+- [x] Triage all 13 original substantive findings and compare registries.
+- [x] Freeze the importer and attempt a DD-022 holdout if available.
+- [ ] Complete reports, adoption decision v2, validation, CI, merge, and closure.
+
+### Trial decision log
+
+- `2026-07-22`: treat `06523c8d9ff6d0f4e66457997f5094b69065ec95`
+  as the fourth calibration snapshot because it remains live `main`; no DD-022
+  final commit exists before importer work begins.
+- `2026-07-22`: create one immutable ignored clone per snapshot rather than
+  repointing the existing baseline source checkout.
+- `2026-07-22`: freeze the importer after one schema-based maintenance change
+  at SHA-256 `b9a0f4409e3aa53072f391f279cf33dbc11041f5755534177368386551ea79df`;
+  the change treats a missing relationship registry as an earlier valid schema,
+  without naming a commit or inventing relations.
+- `2026-07-22`: no DD-022 final commit was available before or immediately after
+  freeze; live `main` remained `06523c8d`. Record the unavailable holdout rather
+  than tuning to concurrent unmerged work.
+- `2026-07-22`: choose adoption decision v2 option 2, continue bounded pilot.
+  Relationship reconstruction exactly covers the two available registries, but
+  the evidence heuristic's bounded false-positive and advisory-noise rates are
+  both 100%, and no unseen holdout exists.
+
+### Trial discoveries
+
+- All four snapshots import with 1,473/1,868, 1,602/2,130, 1,656/2,548,
+  and 1,713/2,659 materialized objects/relations respectively; every rebuild is
+  byte-identical and every event log replays.
+- The relationship registry first appears between the second and third
+  snapshots. ActiveGraph exactly reconstructs all 166 baseline and 174 DD-021
+  canonical relations, misses none, has no type mismatch, and supplies full
+  reverse-link coverage. Thirty additional inferred synthesis/legacy relations
+  remain visibly separate.
+- The original 13 errors classify as A=0, B=5, C=2, D=6. The eight baseline
+  warnings are expected historical/preliminary conditions. None should block
+  CI under the reviewed policy.
+- Deterministic summary/count artifacts are readable; raw graph/relation diffs
+  span hundreds of hunks and are supporting rather than primary review surfaces.
+- The captured single-process local import/export observations remain below 13
+  seconds and 27.0 MB peak traced memory. No statistical claim is made; exact
+  operational measurements remain isolated from deterministic content.

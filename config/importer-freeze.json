@@ -1,0 +1,16 @@
+{
+  "schema_version": "dd-activegraph-importer-freeze/v1",
+  "importer_path": "dd_activegraph/importers.py",
+  "importer_sha256": "b9a0f4409e3aa53072f391f279cf33dbc11041f5755534177368386551ea79df",
+  "frozen_after_snapshots": [
+    "63c235c2961392e1816d0fee9393dbadc7259790",
+    "8ac0700e97baf51c4585bed7c4a3497dcb57fdac",
+    "a560bb771a8ccaf92958bde8e72280e2c968825f",
+    "06523c8d9ff6d0f4e66457997f5094b69065ec95"
+  ],
+  "frozen_utc": "2026-07-22T20:45:00Z",
+  "importer_changes_required": 1,
+  "commit_specific_branches": 0,
+  "holdout_commit": null,
+  "holdout_status": "unavailable-at-freeze"
+}

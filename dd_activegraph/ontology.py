@@ -97,11 +97,11 @@ def stable_relation_id(
     return f"relation:{sha256_text(canonical_json(payload))[:24]}"
 
 
-def export_metadata() -> dict[str, str]:
+def export_metadata(source_commit: str = SOURCE_COMMIT) -> dict[str, str]:
     return {
         "schema_version": SCHEMA_VERSION,
         "source_repository": SOURCE_REPOSITORY,
-        "source_commit": SOURCE_COMMIT,
+        "source_commit": source_commit,
         "activegraph_commit": ACTIVEGRAPH_COMMIT,
         "activegraph_packs_commit": ACTIVEGRAPH_PACKS_COMMIT,
         "generator_version": GENERATOR_VERSION,

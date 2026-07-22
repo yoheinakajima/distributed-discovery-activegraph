@@ -1,0 +1,32 @@
+{
+  "activegraph_diff": {
+    "divergent_objects": 2,
+    "divergent_relations": 0,
+    "fork_only_events": 2,
+    "parent_only_events": 0,
+    "shared_events": 4384
+  },
+  "canonical_content_sha256": "e1d88a0418021fff4270dd1b9cca6b9241eb9acfb79dd9c28817df3868311a95",
+  "changed_field": "attributes.status",
+  "changed_study": "study:DD-001",
+  "fork_run_id": "run_dd_activegraph_status_fork_v1",
+  "metadata": {
+    "activegraph_commit": "8aedb1866cf5dce056af97529152ffd6f468a1ed",
+    "activegraph_packs_commit": "6639a5385518ad49f74813373c85cf96eff9adc0",
+    "generator_version": "0.1.0",
+    "schema_version": "dd-activegraph/v1",
+    "source_commit": "06523c8d9ff6d0f4e66457997f5094b69065ec95",
+    "source_repository": "https://github.com/yoheinakajima/distributed-discovery"
+  },
+  "new_findings": [
+    {
+      "code": "study_status_mismatch",
+      "message": "Study public phase and status.yml disagree.",
+      "subject_key": "study:DD-001"
+    }
+  ],
+  "new_value": "planned",
+  "parent_run_id": "run_dd_activegraph_import_v1",
+  "replay_verified": true,
+  "scientific_source_changed": false
+}

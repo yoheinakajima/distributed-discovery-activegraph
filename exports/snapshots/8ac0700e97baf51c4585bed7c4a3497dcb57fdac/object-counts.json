@@ -1,0 +1,33 @@
+{
+  "canonical_content_sha256": "d02e1767d900541ccd9e6d7f797c6760b02e910b011745cfafbad98615139b99",
+  "content": {
+    "artifact": 894,
+    "benchmark_task": 24,
+    "certificate": 39,
+    "chapter": 6,
+    "claim": 96,
+    "configuration": 35,
+    "corruption_test": 17,
+    "decision": 70,
+    "experiment_module": 65,
+    "hypothesis": 20,
+    "lab": 12,
+    "paper": 6,
+    "proof": 49,
+    "research_program": 1,
+    "research_question": 24,
+    "research_run": 49,
+    "roadmap_item": 20,
+    "route": 144,
+    "study": 24,
+    "theorem_family": 7
+  },
+  "metadata": {
+    "activegraph_commit": "8aedb1866cf5dce056af97529152ffd6f468a1ed",
+    "activegraph_packs_commit": "6639a5385518ad49f74813373c85cf96eff9adc0",
+    "generator_version": "0.1.0",
+    "schema_version": "dd-activegraph/v1",
+    "source_commit": "8ac0700e97baf51c4585bed7c4a3497dcb57fdac",
+    "source_repository": "https://github.com/yoheinakajima/distributed-discovery"
+  }
+}

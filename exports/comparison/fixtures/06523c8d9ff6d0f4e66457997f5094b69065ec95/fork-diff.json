@@ -1,0 +1,33 @@
+{
+  "activegraph_diff": {
+    "divergent_objects": 1,
+    "divergent_relations": 1,
+    "fork_only_events": 2,
+    "parent_only_events": 0,
+    "shared_events": 4384
+  },
+  "canonical_content_sha256": "f49807532122859d106f104d4a70e3858f27294d519b2d7a0eb59b8a0767b330",
+  "fork_run_id": "run_dd_activegraph_reverse_link_fork_v1",
+  "metadata": {
+    "activegraph_commit": "8aedb1866cf5dce056af97529152ffd6f468a1ed",
+    "activegraph_packs_commit": "6639a5385518ad49f74813373c85cf96eff9adc0",
+    "generator_version": "0.1.0",
+    "schema_version": "dd-activegraph/v1",
+    "source_commit": "06523c8d9ff6d0f4e66457997f5094b69065ec95",
+    "source_repository": "https://github.com/yoheinakajima/distributed-discovery"
+  },
+  "new_findings": [
+    {
+      "code": "missing_reverse_relation",
+      "message": "Missing reverse relation builds_on from lab:atlas.",
+      "subject_key": "study:DD-009"
+    }
+  ],
+  "parent_run_id": "run_dd_activegraph_import_v1",
+  "removed_relation": {
+    "source_key": "lab:atlas",
+    "target_key": "study:DD-009",
+    "type": "builds_on"
+  },
+  "replay_verified": true
+}

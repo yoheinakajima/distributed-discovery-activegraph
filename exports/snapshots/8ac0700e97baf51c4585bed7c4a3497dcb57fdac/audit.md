@@ -1,0 +1,70 @@
+# Deterministic audit
+
+Findings: 53; errors: 13.
+
+- `current_state_reconciliation`: **warning** (2)
+- `dangling_relation_detector`: **pass** (0)
+- `orphan_claim_detector`: **pass** (0)
+- `paper_admission_gate`: **advisory** (6)
+- `public_safety_gate`: **pass** (0)
+- `reverse_link_detector`: **pass** (0)
+- `site_relation_materializer`: **pass** (0)
+- `stale_status_detector`: **pass** (0)
+- `study_promotion_gate`: **advisory** (24)
+- `unverified_run_detector`: **fail** (21)
+
+## Findings
+
+- **warning** `current_state_count_mismatch` — `research_program:distributed-discovery`: Declared and computed public_html_routes counts differ.
+- **warning** `current_state_count_mismatch` — `research_program:distributed-discovery`: Declared and computed laboratory_routes counts differ.
+- **advisory** `paper_admission_advisory` — `paper:incentive-to-ignore`: Paper admission gate evaluated without changing source metadata.
+- **advisory** `paper_admission_advisory` — `paper:threshold-discovery`: Paper admission gate evaluated without changing source metadata.
+- **advisory** `paper_admission_advisory` — `paper:foundations`: Paper admission gate evaluated without changing source metadata.
+- **advisory** `paper_admission_advisory` — `paper:common-source-trap`: Paper admission gate evaluated without changing source metadata.
+- **advisory** `paper_admission_advisory` — `paper:three-results`: Paper admission gate evaluated without changing source metadata.
+- **advisory** `paper_admission_advisory` — `paper:discovery-institutions`: Paper admission gate evaluated without changing source metadata.
+- **advisory** `study_promotion_advisory` — `study:DD-020`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-008`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-007`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-008B`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-008A`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-001`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-011`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-014`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-016`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-009`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-018`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-017`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-003`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-010`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-000`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-005`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-013`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-004`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-006B`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-002`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-006`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-019`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-015`: Study promotion gate evaluated from visible source files only.
+- **advisory** `study_promotion_advisory` — `study:DD-012`: Study promotion gate evaluated from visible source files only.
+- **error** `run_missing_verifier` — `research_run:20260720T200124Z_DD-001_6eb12861_f9bcf73ec7`: Run has no verifier required by its visible study plan.
+- **error** `run_missing_verifier` — `research_run:20260720T225701Z_DD-002_a12ba3e8_e29b1460ae`: Run has no verifier required by its visible study plan.
+- **error** `run_missing_corruption_test` — `research_run:20260721T022739Z_DD-001_358cb1eb_cd16846ba5`: Substantive computational run has no corruption-test output.
+- **error** `run_missing_verifier` — `research_run:20260720T200447Z_DD-001_6eb12861_ba766d1eba`: Run has no verifier required by its visible study plan.
+- **warning** `run_missing_output_checksum` — `research_run:20260720T190055Z_DD-000_32dd1c32_217c602fa0`: Run has no checksummed output.
+- **warning** `run_validation_not_passed` — `research_run:20260720T190055Z_DD-000_32dd1c32_217c602fa0`: Run validation status is not passed.
+- **error** `run_missing_verifier` — `research_run:20260721T153110Z_DD-008A_637f2b94_06307caab4`: Run has no verifier required by its visible study plan.
+- **error** `run_missing_verifier` — `research_run:20260722T044453Z_DD-015_34bc4379_33e1da478b`: Run has no verifier required by its visible study plan.
+- **error** `run_missing_verifier` — `research_run:20260720T200245Z_DD-001_6eb12861_ba766d1eba`: Run has no verifier required by its visible study plan.
+- **error** `run_missing_corruption_test` — `research_run:20260720T200124Z_DD-001_6eb12861_f9bcf73ec7`: Substantive computational run has no corruption-test output.
+- **error** `run_missing_corruption_test` — `research_run:20260720T200245Z_DD-001_6eb12861_ba766d1eba`: Substantive computational run has no corruption-test output.
+- **warning** `run_exit_nonzero` — `research_run:20260720T190055Z_DD-000_32dd1c32_217c602fa0`: Run exit status is nonzero.
+- **warning** `run_exit_nonzero` — `research_run:20260720T185640Z_DD-000_32dd1c32_217c602fa0`: Run exit status is nonzero.
+- **error** `run_missing_corruption_test` — `research_run:20260720T200447Z_DD-001_6eb12861_ba766d1eba`: Substantive computational run has no corruption-test output.
+- **warning** `run_validation_not_passed` — `research_run:20260721T140505Z_DD-006A_ea3a1ae3_0d8f84a4b7`: Run validation status is not passed.
+- **error** `run_missing_corruption_test` — `research_run:20260720T220911Z_DD-001_6822d4c6_40bf5b06a5`: Substantive computational run has no corruption-test output.
+- **error** `run_missing_corruption_test` — `research_run:20260720T223829Z_DD-001_b2cc23f4_5e16a90ad1`: Substantive computational run has no corruption-test output.
+- **warning** `run_exit_nonzero` — `research_run:20260721T140505Z_DD-006A_ea3a1ae3_0d8f84a4b7`: Run exit status is nonzero.
+- **warning** `run_missing_output_checksum` — `research_run:20260720T185640Z_DD-000_32dd1c32_217c602fa0`: Run has no checksummed output.
+- **error** `run_missing_corruption_test` — `research_run:20260720T221139Z_DD-001_b1d8d431_40bf5b06a5`: Substantive computational run has no corruption-test output.
+- **warning** `run_validation_not_passed` — `research_run:20260720T185640Z_DD-000_32dd1c32_217c602fa0`: Run validation status is not passed.

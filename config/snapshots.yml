@@ -1,0 +1,20 @@
+schema_version: dd-activegraph-snapshots/v1
+source:
+  repository: https://github.com/yoheinakajima/distributed-discovery
+snapshots:
+  - label: program-v4-final-handoff
+    commit: 63c235c2961392e1816d0fee9393dbadc7259790
+    role: calibration
+  - label: program-v5-pre-dd-021-acceptance
+    commit: 8ac0700e97baf51c4585bed7c4a3497dcb57fdac
+    role: calibration
+  - label: original-pilot-baseline
+    commit: a560bb771a8ccaf92958bde8e72280e2c968825f
+    role: calibration
+  - label: dd-021-final-editorial-gate
+    commit: 06523c8d9ff6d0f4e66457997f5094b69065ec95
+    role: calibration
+holdout:
+  policy: latest merged DD-022 final main commit, if available after importer freeze
+  commit: null
+  status: unavailable-after-freeze
