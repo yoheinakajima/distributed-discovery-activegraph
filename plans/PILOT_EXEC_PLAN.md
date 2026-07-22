@@ -169,7 +169,8 @@ tracked-tree listing is
 - [x] Complete the explicit advisory evidence-role analysis.
 - [x] Write adoption decision v3 and the bounded integration proposal.
 - [x] Run full local validation.
-- [ ] Pass GitHub validation, merge PR #6, and close issue #5.
+- [x] Pass GitHub validation on PR #6.
+- [ ] Merge PR #6 and close issue #5.
 
 ### Holdout decision log
 
@@ -209,6 +210,8 @@ tracked-tree listing is
 - Local validation passes Ruff, formatting, strict MyPy, 36 tests, baseline
   verification, four-snapshot trial verification, and two fresh holdout
   rebuild/replay attempts.
+- GitHub Actions run `29964378888` passes the same full validation gate on the
+  pushed holdout implementation.
 
 ## Multi-snapshot schema-drift and audit-stability trial
 
